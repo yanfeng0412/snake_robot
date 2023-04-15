@@ -1,0 +1,8 @@
+prefix=/home/a/fyp_ws/install
+
+Name: snake_description
+Description: Description of snake_description
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

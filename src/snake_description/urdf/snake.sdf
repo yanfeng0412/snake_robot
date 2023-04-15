@@ -1,0 +1,954 @@
+<sdf version='1.7'>
+  <model name='s2'>
+    <link name='base_link'>
+      <inertial>
+        <pose>-0.000234 -0.006977 0.080093 0 -0 0</pose>
+        <mass>0.692458</mass>
+        <inertia>
+          <ixx>0.000997184</ixx>
+          <ixy>-2.07132e-08</ixy>
+          <ixz>-3.42331e-08</ixz>
+          <iyy>0.00155698</iyy>
+          <iyz>-3.3081e-09</iyz>
+          <izz>0.00109838</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j1' type='revolute'>
+      <pose relative_to='base_link'>-0.000238 -0.09187 0.078152 0 -0 0</pose>
+      <parent>base_link</parent>
+      <child>l1</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l1'>
+      <pose relative_to='j1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 6.3e-05 0 0 -0 0</pose>
+        <mass>0.00768922</mass>
+        <inertia>
+          <ixx>1.52375e-07</ixx>
+          <ixy>-9.2784e-13</ixy>
+          <ixz>-3.46372e-12</ixz>
+          <iyy>3.55817e-06</iyy>
+          <iyz>-1.81225e-12</iyz>
+          <izz>3.54429e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='l1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j2' type='revolute'>
+      <pose relative_to='l1'>0 -0.025 0 0 -0 0</pose>
+      <parent>l1</parent>
+      <child>l2</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l2'>
+      <pose relative_to='j2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.00301 -0.086839 0.001903 0 -0 0</pose>
+        <mass>0.707086</mass>
+        <inertia>
+          <ixx>0.00124462</ixx>
+          <ixy>-1.17706e-05</ixy>
+          <ixz>-5.59026e-09</ixz>
+          <iyy>0.00158341</iyy>
+          <iyz>4.68266e-10</iyz>
+          <izz>0.0012417</izz>
+        </inertia>
+      </inertial>
+      <collision name='l2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j2.1' type='revolute'>
+      <pose relative_to='l2'>0.033727 -0.087887 -0.063122 0.52363 -0.010658 -1.5424</pose>
+      <parent>l2</parent>
+      <child>w2.1</child>
+      <axis>
+        <xyz>0 0 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w2.1'>
+      <pose relative_to='j2.1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>1.92733e-21</ixy>
+          <ixz>-1.65436e-24</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>0</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w2.1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w2.1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w2.1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w2.1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j2.2' type='revolute'>
+      <pose relative_to='l2'>-0.036231 -0.090306 -0.058122 -0.52991 0.14706 -1.6219</pose>
+      <parent>l2</parent>
+      <child>w2.2</child>
+      <axis>
+        <xyz>0 0 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w2.2'>
+      <pose relative_to='j2.2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>2.5808e-21</ixy>
+          <ixz>-1.32349e-23</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>-1.85288e-22</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w2.2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w2.2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w2.2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w2.2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j3' type='revolute'>
+      <pose relative_to='l2'>0.006152 -0.177894 0 0 -0 0</pose>
+      <parent>l2</parent>
+      <child>l3</child>
+      <axis>
+        <xyz>0.999403 0.03456 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l3'>
+      <pose relative_to='j3'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-2e-06 6.3e-05 0 0 -0 0</pose>
+        <mass>0.00768922</mass>
+        <inertia>
+          <ixx>1.56443e-07</ixx>
+          <ixy>-1.17635e-07</ixy>
+          <ixz>-3.39886e-12</ixz>
+          <iyy>3.5541e-06</iyy>
+          <iyz>-1.93166e-12</iyz>
+          <izz>3.54429e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='l3_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l3_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j4' type='revolute'>
+      <pose relative_to='l3'>0.000864 -0.024985 0 0 -0 0</pose>
+      <parent>l3</parent>
+      <child>l4</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l4'>
+      <pose relative_to='j4'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.006009 -0.086683 0.001903 0 -0 0</pose>
+        <mass>0.707086</mass>
+        <inertia>
+          <ixx>0.00124584</ixx>
+          <ixy>-2.34438e-05</ixy>
+          <ixz>-5.50395e-09</ixz>
+          <iyy>0.00158219</iyy>
+          <iyz>3.18679e-10</iyz>
+          <izz>0.0012417</izz>
+        </inertia>
+      </inertial>
+      <collision name='l4_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l4_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j3.1' type='revolute'>
+      <pose relative_to='l4'>0.036745 -0.086669 -0.063122 0.52363 -0.010658 -1.5078</pose>
+      <parent>l4</parent>
+      <child>w3.1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w3.1'>
+      <pose relative_to='j3.1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>1.90872e-21</ixy>
+          <ixz>-2.48154e-24</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>3.70577e-22</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w3.1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w3.1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w3.1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w3.1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j3.2' type='revolute'>
+      <pose relative_to='l4'>-0.033088 -0.091504 -0.058122 -0.52991 0.14706 -1.5873</pose>
+      <parent>l4</parent>
+      <child>w3.2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w3.2'>
+      <pose relative_to='j3.2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>-2.24331e-21</ixy>
+          <ixz>5.29396e-23</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>-1.32349e-21</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w3.2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w3.2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w3.2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w3.2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j5' type='revolute'>
+      <pose relative_to='l4'>0.012296 -0.177575 0 0 -0 0</pose>
+      <parent>l4</parent>
+      <child>l5</child>
+      <axis>
+        <xyz>0.997611 0.069079 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l5'>
+      <pose relative_to='j5'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-4e-06 6.3e-05 0 0 -0 0</pose>
+        <mass>0.00768922</mass>
+        <inertia>
+          <ixx>1.68627e-07</ixx>
+          <ixy>-2.34707e-07</ixy>
+          <ixz>-3.32975e-12</ixz>
+          <iyy>3.54192e-06</iyy>
+          <iyz>-2.04815e-12</iyz>
+          <izz>3.54429e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='l5_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l5_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j6' type='revolute'>
+      <pose relative_to='l5'>0.001727 -0.02494 0 0 -0 0</pose>
+      <parent>l5</parent>
+      <child>l6</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l6'>
+      <pose relative_to='j6'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.009001 -0.086423 0.001903 0 -0 0</pose>
+        <mass>0.707087</mass>
+        <inertia>
+          <ixx>0.00124786</ixx>
+          <ixy>-3.50052e-05</ixy>
+          <ixz>-5.576e-09</ixz>
+          <iyy>0.00158017</iyy>
+          <iyz>1.01672e-10</iyz>
+          <izz>0.0012417</izz>
+        </inertia>
+      </inertial>
+      <collision name='l6_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l6_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j4.1' type='revolute'>
+      <pose relative_to='l6'>0.039718 -0.085347 -0.063122 0.52363 -0.010658 -1.4732</pose>
+      <parent>l6</parent>
+      <child>w4.1</child>
+      <axis>
+        <xyz>0 0 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w4.1'>
+      <pose relative_to='j4.1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>2.53283e-21</ixy>
+          <ixz>-1.07533e-23</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>2.64698e-22</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w4.1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w4.1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w4.1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w4.1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j4.2' type='revolute'>
+      <pose relative_to='l6'>-0.029906 -0.092593 -0.058122 -0.52991 0.14706 -1.5527</pose>
+      <parent>l6</parent>
+      <child>w4.2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w4.2'>
+      <pose relative_to='j4.2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>-1.35658e-21</ixy>
+          <ixz>-1.32349e-23</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>-7.94093e-23</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w4.2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w4.2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w4.2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w4.2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j7' type='revolute'>
+      <pose relative_to='l6'>0.018426 -0.177044 0 0 -0 0</pose>
+      <parent>l6</parent>
+      <child>l7</child>
+      <axis>
+        <xyz>0.994628 0.103515 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l7'>
+      <pose relative_to='j7'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-7e-06 6.3e-05 0 0 -0 0</pose>
+        <mass>0.00768922</mass>
+        <inertia>
+          <ixx>1.8887e-07</ixx>
+          <ixy>-3.50657e-07</ixy>
+          <ixz>-3.25751e-12</ixz>
+          <iyy>3.52168e-06</iyy>
+          <iyz>-2.16106e-12</iyz>
+          <izz>3.54429e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='l7_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l7.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l7_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l7.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j8' type='revolute'>
+      <pose relative_to='l7'>0.002588 -0.024866 0 0 -0 0</pose>
+      <parent>l7</parent>
+      <child>l8</child>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='l8'>
+      <pose relative_to='j8'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.011517 -0.082731 0.001915 0 -0 0</pose>
+        <mass>0.702654</mass>
+        <inertia>
+          <ixx>0.00111087</ixx>
+          <ixy>-6.26783e-05</ixy>
+          <ixz>-2.7711e-09</ixz>
+          <iyy>0.00155244</iyy>
+          <iyz>9.93109e-10</iyz>
+          <izz>0.00099923</izz>
+        </inertia>
+      </inertial>
+      <collision name='l8_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l8.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='l8_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/l8.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j5.1' type='revolute'>
+      <pose relative_to='l8'>0.046933 -0.083327 -0.060622 -0.52464 0.059931 1.6744</pose>
+      <parent>l8</parent>
+      <child>w5.1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w5.1'>
+      <pose relative_to='j5.1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 -0 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>-2.85212e-21</ixy>
+          <ixz>-6.61744e-24</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>1.05879e-22</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w5.1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w5.1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w5.1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w5.1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j5.2' type='revolute'>
+      <pose relative_to='l8'>-0.022399 -0.092975 -0.060622 0.52464 -0.059931 1.6744</pose>
+      <parent>l8</parent>
+      <child>w5.2</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <effort>100</effort>
+          <velocity>100</velocity>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w5.2'>
+      <pose relative_to='j5.2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 -0 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>1.00916e-21</ixy>
+          <ixz>1.98523e-23</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>-2.11758e-22</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w5.2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w5.2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w5.2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w5.2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j1.1' type='revolute'>
+      <pose relative_to='base_link'>0.030432 -0.00287 0.01503 0.52363 -0.010658 -1.5769</pose>
+      <parent>base_link</parent>
+      <child>w1.1</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w1.1'>
+      <pose relative_to='j1.1'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>-1.03191e-21</ixy>
+          <ixz>-8.27181e-25</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>3.17637e-22</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w1.1_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w1.1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w1.1_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w1.1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='j1.2' type='revolute'>
+      <pose relative_to='base_link'>-0.039568 -0.00287 0.02003 -0.52991 0.14706 -1.6564</pose>
+      <parent>base_link</parent>
+      <child>w1.2</child>
+      <axis>
+        <xyz>0 0 0</xyz>
+        <limit>
+          <lower>-7</lower>
+          <upper>7</upper>
+          <effort>100</effort>
+          <velocity>100</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='w1.2'>
+      <pose relative_to='j1.2'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0 0.005 0 0 -0 0</pose>
+        <mass>0.0110969</mass>
+        <inertia>
+          <ixx>1.11072e-06</ixx>
+          <ixy>6.28657e-22</ixy>
+          <ixz>6.61744e-23</ixz>
+          <iyy>2.05541e-06</iyy>
+          <iyz>-2.64698e-23</iyz>
+          <izz>1.11072e-06</izz>
+        </inertia>
+      </inertial>
+      <collision name='w1.2_collision'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w1.2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='w1.2_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://s2/meshes/w1.2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+  </model>
+</sdf>

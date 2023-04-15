@@ -1,0 +1,2 @@
+snake2_control:snake2_description:snake2_gazebo:snake_control:snake_description:snake_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/a/fyp_ws/devel -DCMAKE_INSTALL_PREFIX=/home/a/fyp_ws/install -G Unix Makefiles
