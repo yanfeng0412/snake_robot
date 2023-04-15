@@ -19,8 +19,10 @@ Step3: (source devel/setup.bash to activate your workspace )
     rosrun snake2_control snake2.py
 
 ** the files （snake2_gazebo.launch) stored are used to load the gazebo world and some worlds parameter such as gravity, simulation time accel, obstacles, etc...
+
 ** (snake2_control.launch) stored the file to load the ros gazebo controller.
-**  snake2_control snake2
+
+**  snake2.py use to publish/send the joint message to the gazebo robot by python code 
   
 
 
